@@ -14,28 +14,34 @@
 
     <div id="output">0</div>
 
-    <button onclick="countDown(1)">Down</button>
+    <button onclick="countDown(0, 10)">-10</button>
+    <button onclick="countDown(1, 0)">Down</button>
 
-    <button onclick="countUP(1)">Up</button>
+    <button onclick="countUP(1, 0)">Up</button>
+    <button onclick="countUP(0, 10)">+10</button>
    
-    <button onclick="reset()">reset</button>
+    <button onclick="reset()">Reset</button>
 
     <script>
 
         var outputDiv = document.getElementById('output');
         var numToShow = 0;
         
-        function countUP(add1) {
+        function countUP(add1, add10) {
 
             numToShow = numToShow + add1;
-         
+            
+            numToShow = numToShow + add10;
+
             outputDiv.innerHTML = numToShow;
         }
-        function countDown(sub1) {
+        function countDown(sub1, sub10) {
             
             numToShow = numToShow - sub1;
-    
+            
+            numToShow = numToShow - sub10;
             outputDiv.innerHTML = numToShow;
+
         }
        function reset () {
         numToShow = 0;
