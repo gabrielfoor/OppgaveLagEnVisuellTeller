@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teller</title>
+
+</head>
+
+<body>
+
+    
+
+    <div id="output">0</div>
+
+    <button onclick="countDown(1)">Down</button>
+
+    <button onclick="countUP(1)">Up</button>
+   
+    <button onclick="reset()">reset</button>
+
+    <script>
+
+        var outputDiv = document.getElementById('output');
+        var numToShow = 0;
+        
+        function countUP(add1) {
+
+            numToShow = numToShow + add1;
+         
+            outputDiv.innerHTML = numToShow;
+        }
+        function countDown(sub1) {
+            
+            numToShow = numToShow - sub1;
+    
+            outputDiv.innerHTML = numToShow;
+        }
+       function reset () {
+        numToShow = 0;
+        outputDiv.innerHTML = numToShow;
+       }
+    </script>
+
+</body>
+
+</html>
